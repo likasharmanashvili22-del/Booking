@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+:root{
+        --night: #070b1f;
+    --night-2: #0d1433;
+    --glass: rgba(255, 255, 255, .055);
+    --glass-2: rgba(255, 255, 255, .09);
+    --line: rgba(255, 255, 255, .12);
+    --text: #eef1ff;
+    --muted: #8f98c4;
+    --teal: #3be3c4;
+    --blue: #5b7bff;
+    --amber: #ffb84d;
+    --grad: linear-gradient(135deg, var(--teal), var(--blue));
+}
+
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background:  radial-gradient(1.5px 1.5px at 8% 18%, #fff, transparent 60%), radial-gradient(1px 1px at 22% 72%, #fff, transparent 60%), radial-gradient(1.5px 1.5px at 35% 30%, #cfe0ff, transparent 60%), radial-gradient(1px 1px at 48% 88%, #fff, transparent 60%), radial-gradient(1.5px 1.5px at 63% 12%, #fff, transparent 60%), radial-gradient(1px 1px at 74% 58%, #cfe0ff, transparent 60%), radial-gradient(1.5px 1.5px at 88% 82%, #fff, transparent 60%), radial-gradient(1px 1px at 93% 26%, #fff, transparent 60%), radial-gradient(1px 1px at 14% 46%, #fff, transparent 60%), radial-gradient(1px 1px at 56% 48%, #fff, transparent 60%), /* aurora glows */ radial-gradient(700px 420px at 15% 0%, rgba(59, 227, 196, .22), transparent 65%), radial-gradient(800px 500px at 100% 100%, rgba(91, 123, 255, .28), transparent 65%), linear-gradient(180deg, var(--night), var(--night-2));
+    background-attachment: fixed;
+    display: flex;
+align-items: center;
+justify-content: center;}
+.main
+{
+    display: flex;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    
+}
+.form{
+background: var(--glass);
+padding: 30px;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+
+.ticket{
+    background: linear-gradient(180deg, rgba(59, 227, 196, .07), rgba(91, 123, 255, .07));
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 2px dashed var(--line) ;
+}
+.form .text{
+    display: flex;
+    flex-direction: column;
+}
+.form .text h1{
+    color: var(--text);
+    font-weight: 300
+    ;
+}
+
+.form .text h1 span{
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.form .text p{
+    color: var(--muted);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-top: -20px;
+}
+.form{
+    width: 600px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.logo span{
+    background: var(--grad);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.logo h3{
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.select-menu{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+     font-family: 'Space Grotesk', sans-serif;
+}
+#from, #to{
+background: var(--glass);
+border: 1px solid var(--line);
+padding: 15px 30px;
+width: 45%;
+border-radius: 10px;
+color: var(--text);
+cursor: pointer;
+ font-family: 'Space Grotesk', sans-serif;
+}
+
+.select-menu select option{
+    background: var(--night);
+    color: var(--text);
+    border: none;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.select-menu select:focus {
+  outline: 1px solid var(--teal);
+    border: 1px solid var(--teal);
+    box-shadow: 0 0 10px var(--teal);
+}
+
+
+.select-menu select:active {
+    border-color: var(--teal);
+}
+
+.select-menu i{
+    color: var(--teal);
+}
+
+.date{
+    background: var(--glass);
+  
+    padding: 20px;
+    background: var(--glass);
+border: 1px solid var(--line);
+padding: 10px 30px;
+width: 50%;
+border-radius: 10px;
+color: var(--text);
+cursor: pointer;
+display: flex;
+gap: 10px;
+flex-direction: column;
+ font-family: 'Space Grotesk', sans-serif;
+}
+
+.date label{
+    color: var(--muted);
+    font-size: 10px;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.date input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.date input{
+    background: transparent;
+    border: none;
+   color:var(--text)
+}
+.dates{
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.date:focus-within {
+    border: 1px solid var(--teal);
+    box-shadow: 0 0 10px var(--teal);
+}
+
+
+.date input:focus{
+ border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 15px;
+    
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.travelers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.travelers label{
+    color: var(--muted);
+    text-transform: uppercase;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.travelers .butttons{
+display: flex;
+width: 95%;
+justify-content: space-between;
+background: var(--night);
+padding: 20px;
+border: 1px solid var(--line);
+border-radius: 20px;
+}
+.butttons button{
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+     border: 1px solid transparent;
+      font-family: 'Space Grotesk', sans-serif;
+}
+.butttons button:focus{
+    background: var(--grad);
+    border: 1px solid var(--line);
+     box-shadow: 0 0 6px var(--teal);
+}
+
+.cabin{
+      display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+     font-family: 'Space Grotesk', sans-serif;
+}
+
+.cabin label{
+     color: var(--muted);
+    text-transform: uppercase;
+     font-family: 'Space Grotesk', sans-serif;
+}
+
+.cabin-butttons{
+    display: flex;
+width: 95%;
+justify-content: space-between;
+background: var(--night);
+padding: 20px;
+border: 1px solid var(--line);
+border-radius: 20px;
+}
+
+.cabin-butttons button{
+      padding: 30px 20px;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--text);
+     border: 1px solid transparent;
+     color: var(--muted);
+     font-weight: 600;
+      font-family: 'Space Grotesk', sans-serif;
+    
+}
+
+.cabin-butttons button:focus{
+    background: var(--grad);
+    border: 1px solid var(--line);
+    box-shadow: 0 0 6px var(--teal);
+    color: var(--night);
+}
+.extras{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.extras label{
+      color: var(--muted);
+    text-transform: uppercase;
+     font-family: 'Space Grotesk', sans-serif;
+}
+.extra-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+.extra-button{
+background-color: var(--glass);
+border: 1px solid var(--line);
+border-radius: 20px;
+width: 40%;
+padding:5px 20px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.extra-button h3{
+color: var(--text);
+}
+
+.extra-button p{
+    color: var(--muted);
+}
+
+.extra-button:hover{
+    
+    border: 1px solid var(--teal);
+     box-shadow: 0 0 6px var(--teal);
+}
+
+#email{
+background: var(--glass);
+padding: 20px;
+width: 93%;
+border: none;
+border-radius: 10px;
+}
+
+#email::placeholder {
+    color: var(--muted);
+font-family: 'Space Grotesk', sans-serif;
+
+}
+#email {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+#email:focus {
+    border: 1px solid var(--teal);
+    box-shadow: 0 0 6px var(--teal);
+    outline: none;
+    padding-left: 20px;
+}
+
+#email {
+    transition: all 0.3s ease;
+}
+#email:focus::placeholder {
+   
+    font-size: 12px;
+    margin-top: -10px;
+    position: absolute;
+    color: var(--teal);
+}
+
+.submit{
+background: var(--grad);
+border: 1px solid var(--line);
+border-radius: 20px;
+width: 100%;
+padding: 20px;
+font-family: 'Space Grotesk', sans-serif;
+color: var(--night);
+font-weight: 700;
+display: flex;
+gap: 10px;
+align-items: center;
+justify-content: center;
+transition: all 0.2s;
+}
+
+.submit:hover {
+gap: 20px;
+ box-shadow: 0 0 6px var(--teal);
+}
+
+.ticket {
+      font-family: 'Space Grotesk', sans-serif;
+}
+.ticket h4{
+        font-size: 11px;
+    font-weight: 300;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  
+}
+.ticket h1{
+    font-size: 60px;
+    color: var(--text);
+}
+.ticket h1 span{
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.ticket p{
+    color: var(--muted);
+}
+
+.ticket ul{
+    list-style: none;
+    margin-left: -45px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--text);
+    margin-top: 20px;
+}
+
+.ticket ul li{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+   
+}
+
+.ticket ul li span{
+    padding: 10px;
+    background: var(--glass);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+@media (max-width: 768px){
+    body{
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .main{
+        flex-direction: column;
+        border-radius: 0;
+        overflow-x: hidden;
+        border-radius: 20px;
+    }
+
+    .form{
+        width: 300px;
+        border-radius: 0;
+    }
+    .select-menu{
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        width: 100%;
+        margin-left: -20px;
+        width:330px
+    }
+    .select-menu i{
+        display: none;
+    }
+
+    #from, #to{
+        width: 100%;
+       margin-top: 20px;
+  
+
+    }
+    .dates{
+        flex-direction: column;
+        align-items: center;
+         padding: 5px;
+         gap: 20px;
+    }
+
+    .date{
+        width: 90%;
+    }
+
+  .travelers, .cabin{
+    margin-left: -10px;
+  }
+
+  .extra-buttons{
+    flex-direction: column;
+   margin-left: -10px;
+  }
+
+  .extra-buttons .extra-button{
+      width: 90%;
+      padding: 10px 20px;
+      line-height: 10px;
+  }
+   .ticket{
+    border-left: none;
+    border-radius: 0;
+    border-top:  2px dashed var(--line) ;
+    
+   }
+
+   .travelers .butttons{
+    height: 20px;
+    align-items: center;
+   }
+
+   .cabin-butttons{
+    height: 20px;
+    align-items: center;
+   }
+}
